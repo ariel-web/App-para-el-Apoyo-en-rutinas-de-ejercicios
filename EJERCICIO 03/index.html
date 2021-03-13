@@ -1,0 +1,55 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tensorflow</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="./estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h3 stye="align:center" >
+                APLICACION PARA RUTINAS  
+                <hr>        
+            </h3>
+
+        </div>
+
+
+        <div class="row card-video">
+            <div class="video">
+                <video class="camara" autoplay="" playsinline muted id="webcam"></video>
+                <p class="predicion" id="console2"></p>
+            </div>
+
+            <div class="botones">
+                <button class="btn btn-iniciar" onclick="iniciar()">Iniciar</button>
+                <button class="btn btn-parar" onclick="parar()">Parar </button>
+            </div>
+        </div>
+
+        <div class="entrenamineto">
+            <div class="row botones-entre">
+                <button class="btn btn-secondary" id="clase-a" onclick="addExample(0)">mov1</button>
+                <button class="btn btn-secondary" id="clase-b" onclick="addExample(1)">mov2</button>
+                <button class="btn btn-secondary" id="clase-c" onclick="addExample(2)">mov3</button>
+            </div>
+            <h2 class="mensaje" id="msg"> Repeticiones </h2>
+        </div>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+
+</html>
